@@ -57,6 +57,7 @@
         app:layout_constraintGuide_begin="55dp" />
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="219dp"
         android:layout_height="234dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,5 +119,21 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/start_button"
         app:layout_constraintVertical_bias="0.512" />
+
+    <Button
+        android:id="@+id/intent_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:layout_marginBottom="85dp"
+        android:text="menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/check_button"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

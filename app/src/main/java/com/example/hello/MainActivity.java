@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -81,7 +82,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // menu view로 이동하는 버튼 생성
+        Button menu = (Button)findViewById(R.id.intent_page);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_menu = new Intent(getApplicationContext(), IntentPage.class);
+                startActivityForResult(intent_menu, 101);
+            }
+        });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 101){
+            String name = data.getStringExtra("name");
+            Toast.makeText(getApplicationContext(), "메뉴화면으로부터 응답 : " + name, Toast.LENGTH_LONG).show();
+        }
     }
 
     class BackGroundThread extends Thread {
