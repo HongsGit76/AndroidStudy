@@ -15,12 +15,23 @@ public class IntentPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent_page);
 
+        // intent 공부 액티비티로 이동하는 버튼 생성
         Button intentStudy = (Button)findViewById(R.id.intentStudy);
         intentStudy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent studyIntent = new Intent(getApplicationContext(), intentStudy.class);
                 startActivityForResult(studyIntent, 101);
+            }
+        });
+
+        // server 공부 액티비티로 이동하는 버튼 생성
+        Button serverStudy = (Button)findViewById(R.id.serverStudy);
+        serverStudy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent studyServer = new Intent(getApplicationContext(), socket.class);
+                startActivityForResult(studyServer, 102);
             }
         });
 
