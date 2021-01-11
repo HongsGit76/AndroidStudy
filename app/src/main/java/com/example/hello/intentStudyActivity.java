@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class intentStudy extends AppCompatActivity {
+public class intentStudyActivity extends AppCompatActivity {
 
     EditText phoneNumber; // 전화번호 입력 칸
     @Override

@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello">
-        <activity android:name=".MyHttp"></activity>
-        <activity android:name=".socket" />
-        <activity android:name=".intentStudy" />
-        <activity android:name=".IntentPage" />
+        <activity android:name=".VolleyActivity"></activity>
+        <activity android:name=".MyHttpActivity" />
+        <activity android:name=".SocketActivity" />
+        <activity android:name=".intentStudyActivity" />
+        <activity android:name=".IntentPageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

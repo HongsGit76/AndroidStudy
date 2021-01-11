@@ -15,7 +15,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class socket extends AppCompatActivity {
+public class SocketActivity extends AppCompatActivity {
     TextView dataView;
 
     Handler handler = new Handler();

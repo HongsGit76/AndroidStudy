@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntentPage">
+    tools:context=".IntentPageActivity">
 
     <Button
         android:id="@+id/go_to_home"
@@ -53,4 +53,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/serverStudy"
         app:layout_constraintVertical_bias="0.109" />
+
+    <Button
+        android:id="@+id/volley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="40dp"
+        android:text="volley"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/httpReq" />
 </androidx.constraintlayout.widget.ConstraintLayout>

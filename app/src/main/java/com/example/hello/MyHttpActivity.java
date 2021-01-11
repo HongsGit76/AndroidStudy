@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MyHttp extends AppCompatActivity {
+public class MyHttpActivity extends AppCompatActivity {
     EditText editText;
     TextView textView;
 

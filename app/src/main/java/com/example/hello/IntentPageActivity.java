@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class IntentPage extends AppCompatActivity {
+public class IntentPageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class IntentPage extends AppCompatActivity {
         intentStudy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent studyIntent = new Intent(getApplicationContext(), intentStudy.class);
+                Intent studyIntent = new Intent(getApplicationContext(), intentStudyActivity.class);
                 startActivityForResult(studyIntent, 101);
             }
         });
@@ -30,7 +30,7 @@ public class IntentPage extends AppCompatActivity {
         serverStudy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent studyServer = new Intent(getApplicationContext(), socket.class);
+                Intent studyServer = new Intent(getApplicationContext(), SocketActivity.class);
                 startActivityForResult(studyServer, 102);
             }
         });
@@ -40,8 +40,18 @@ public class IntentPage extends AppCompatActivity {
         httpReq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent studyhttp = new Intent(getApplicationContext(), MyHttp.class);
-                startActivityForResult(studyhttp, 102);
+                Intent studyHttp = new Intent(getApplicationContext(), MyHttpActivity.class);
+                startActivityForResult(studyHttp, 102);
+            }
+        });
+
+        // Volley 공부 액티비티로 이동하는 버튼 생성
+        Button volley = (Button)findViewById(R.id.volley);
+        volley.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent studyVolley = new Intent(getApplicationContext(), VolleyActivity.class);
+                startActivityForResult(studyVolley, 102);
             }
         });
 
