@@ -35,6 +35,16 @@ public class IntentPage extends AppCompatActivity {
             }
         });
 
+        // httprequest 공부 액티비티로 이동하는 버튼 생성
+        Button httpReq = (Button)findViewById(R.id.httpReq);
+        httpReq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent studyhttp = new Intent(getApplicationContext(), MyHttp.class);
+                startActivityForResult(studyhttp, 102);
+            }
+        });
+
         // 메인메뉴로 돌아가는 버튼 생성
         Button goHome = (Button)findViewById(R.id.go_to_home);
         goHome.setOnClickListener(new View.OnClickListener() {
