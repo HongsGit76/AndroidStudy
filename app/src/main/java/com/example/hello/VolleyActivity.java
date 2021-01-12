@@ -56,8 +56,8 @@ public class VolleyActivity extends AppCompatActivity {
         });
     }
 
-    // 응답이 왔을 때 보내주는 방식 -> 비동기 방식식
-   public void sendRequest(){
+    // 응답이 왔을 때 보내주는 방식 -> 비동기 방식
+    public void sendRequest(){
         String url = "https://www.google.co.kr";
         StringRequest request = new StringRequest(
                 Request.Method.GET,

@@ -46,11 +46,10 @@
         android:id="@+id/httpReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
         android:text="http request"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/serverStudy"
+        app:layout_constraintStart_toStartOf="@+id/serverStudy"
         app:layout_constraintTop_toBottomOf="@+id/serverStudy"
         app:layout_constraintVertical_bias="0.109" />
 
