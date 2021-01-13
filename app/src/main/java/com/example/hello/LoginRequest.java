@@ -11,7 +11,7 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
 
     // 서버 URL 설정
-    final static private  String URL = "http://127.0.0.1:3000/login";
+    final static private  String URL = "https://99edad6df78b.ngrok.io/login";
     private Map<String, String> map;
     public LoginRequest(
             String userID,
@@ -33,7 +33,6 @@ public class LoginRequest extends StringRequest {
         map = new HashMap<>();
         map.put("userID", userID);
         map.put("userPassword", userPassword);
-
     }
 
     @Override

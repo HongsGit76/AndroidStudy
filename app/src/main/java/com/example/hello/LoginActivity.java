@@ -42,14 +42,17 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
+
                             if (success){ // 회원가입 성공한 경우 if(success)
-                                String userID = jsonObject.getString("userID");
-                                String userPassword = jsonObject.getString("userPassword");
+                                String userIDs = jsonObject.getString("userID");
+                                String userPasswords = jsonObject.getString("userPassword");
 
                                 Toast.makeText(getApplicationContext(), "성공", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra("userID", userID);
-                                intent.putExtra("userPassword", userPassword);
+
+                                intent.putExtra("userID", userIDs);
+                                intent.putExtra("userPassword", userPasswords);
+
                                 startActivity(intent);
                             }else{
                                 Toast.makeText(getApplicationContext(), "실패", Toast.LENGTH_SHORT).show();
@@ -61,12 +64,13 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 };
 
-                LoginRequest loginRequest = new LoginRequest(userID, userPassword, responseListener);
+                LoginRequest loginRequest = new LoginRequest(userID, userPassword,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
             }
         });
 
+        // 회원가입 페이지로 이동
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
